@@ -1,8 +1,10 @@
 install:
   - cmd: java -version
+  - mvn clean install
 
 test_script:
-  - mvn test -B && mvn clean -Pstrict compile test-compile -B
+  - mvn test -B 
+  - mvn clean -Pstrict compile test-compile -B
 
 cache:
   - '%HOMEPATH%\.m2' 
