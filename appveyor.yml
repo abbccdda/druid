@@ -1,6 +1,7 @@
 install:
   - cmd: java -version
   - cmd: echo %username%
+  - cmd: CACLS C:\Users\appveyor\AppData\Local\Temp /g %username%:F
   - mvn clean install
 
 test_script:
