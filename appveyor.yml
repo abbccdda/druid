@@ -1,5 +1,6 @@
 install:
   - cmd: java -version
+  - cmd: echo %username%
   - mvn clean install
 
 test_script:
